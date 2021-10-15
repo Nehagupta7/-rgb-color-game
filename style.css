@@ -1,0 +1,109 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background-color: grey;
+  position: relative;
+  overflow: hidden;
+}
+.color-code {
+  height: 8rem;
+  width: 100%;
+  background-color: hotpink;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  color: grey;
+  font-weight: bolder;
+}
+.option-container {
+  height: 50vh;
+  width: 50%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  place-items: center;
+}
+.color-container {
+  height: 10rem;
+  width: 10rem;
+  margin: 2rem;
+  background-color: rgb(20, 212, 78);
+  border-radius: 0.5rem;
+  color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-container.active {
+  color: black;
+  font-size: 1.1rem;
+  border: 0.2rem solid black;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem darkturquoise;
+  transition: border 0.3s;
+}
+#color-match.matched {
+  font-size: 1.3rem;
+  color: white;
+  border: 0.2rem solid darkturquoise;
+  box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem darkturquoise;
+}
+.result {
+  display: none;
+  height: 100vh;
+  width: 100%;
+  position: fixed;
+  font-size: 2rem;
+  color: white;
+  background-color: rgba(114, 5, 223, 0.459);
+  z-index: 9;
+  text-align: center;
+}
+.result.active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+@media (max-width: 50rem) {
+  body {
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+    overflow: hidden;
+  }
+  .color-code {
+    align-items: center;
+    font-size: 1.5rem;
+    overflow: hidden;
+  }
+  .color-container {
+    font-size: 1rem;
+    height: 7rem;
+    width: 7rem;
+  }
+  .option-container {
+    height: 10vh;
+    width: 30%;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    place-items: center;
+    float: left;
+  }
+  #color-match.matched {
+    font-size: 1rem;
+    color: white;
+    border: 0.2rem solid darkturquoise;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem darkturquoise;
+  }
+  .result {
+    font-size: 1.3rem;
+    align-items: center;
+  }
+}
